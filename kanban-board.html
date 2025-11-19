@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カンバン</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 カンバン Board</h1>
+        
+        <div class="add-task-container">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Enter a new task..."
+                maxlength="200"
+            >
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="board">
+            <!-- To Do Column -->
+            <div class="column todo" data-column="todo">
+                <div class="column-header">To Do</div>
+                <div class="tasks-container" id="todoTasks"></div>
+            </div>
+
+            <!-- In Progress Column -->
+            <div class="column in-progress" data-column="in-progress">
+                <div class="column-header">In Progress</div>
+                <div class="tasks-container" id="inProgressTasks"></div>
+            </div>
+
+            <!-- Done Column -->
+            <div class="column done" data-column="done">
+                <div class="column-header">Done</div>
+                <div class="tasks-container" id="doneTasks"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
